@@ -1,136 +1,35 @@
-window.addEventListener("load", function () {
-
-    document.getElementById("dot1").style.opacity = "1";
-    document.getElementById("dot2").style.opacity = "0.3";
-    document.getElementById("dot3").style.opacity = "0.3";
-    document.getElementById("dot4").style.opacity = "0.3";
-    document.getElementById("dot5").style.opacity = "0.3";
-
-    var next = document.getElementById("continue");
-    next.addEventListener("click", nextStep);
-
-    var next2 = document.getElementById("continue2");
-    next2.addEventListener("click", nextStep2);
-
-    var next3 = document.getElementById("continue3");
-    next3.addEventListener("click", nextStep3);
-
-    var next4 = document.getElementById("continue4");
-    next4.addEventListener("click", nextStep4);
-
-    var prev = document.getElementById("prev");
-    prev.addEventListener("click", prevStep);
-
-    var prev2 = document.getElementById("prev2");
-    prev2.addEventListener("click", prevStep2);
-
-    var prev3 = document.getElementById("prev3");
-    prev3.addEventListener("click", prevStep3);
-
-    var prev4 = document.getElementById("prev4");
-    prev4.addEventListener("click", prevStep4);
-
-    // ======== SECTION 1 =============== //
-
-    function nextStep() {
-        document.getElementById("first").style.display = "none";
-        document.getElementById("second").style.display = "inline";
-
-        document.getElementById("dot1").style.opacity = "0.3";
-        document.getElementById("dot2").style.opacity = "1";
-        document.getElementById("dot3").style.opacity = "0.3";
-        document.getElementById("dot4").style.opacity = "0.3";
-        document.getElementById("dot5").style.opacity = "0.3";
-
-    }
-
-    // ======== SECTION 2 =============== //
-
-    function prevStep() {
-        document.getElementById("second").style.display = "none";
-        document.getElementById("first").style.display = "inline";
-
-        document.getElementById("dot1").style.opacity = "1";
-        document.getElementById("dot2").style.opacity = "0.3";
-        document.getElementById("dot3").style.opacity = "0.3";
-        document.getElementById("dot4").style.opacity = "0.3";
-        document.getElementById("dot5").style.opacity = "0.3";
-    }
-
-    function nextStep2() {
-        document.getElementById("second").style.display = "none";
-        document.getElementById("third").style.display = "inline";
-
-        document.getElementById("dot1").style.opacity = "0.3";
-        document.getElementById("dot2").style.opacity = "0.3";
-        document.getElementById("dot3").style.opacity = "1";
-        document.getElementById("dot4").style.opacity = "0.3";
-        document.getElementById("dot5").style.opacity = "0.3";
-
-    }
-
-
-    // ======== SECTION 3 =============== //
-
-    function prevStep2() {
-        document.getElementById("third").style.display = "none";
-        document.getElementById("second").style.display = "inline";
-
-        document.getElementById("dot1").style.opacity = "0.3";
-        document.getElementById("dot2").style.opacity = "1";
-        document.getElementById("dot3").style.opacity = "0.3";
-        document.getElementById("dot4").style.opacity = "0.3";
-        document.getElementById("dot5").style.opacity = "0.3";
-    }
-
-    function nextStep3() {
-        document.getElementById("third").style.display = "none";
-        document.getElementById("fourth").style.display = "inline";
-
-        document.getElementById("dot1").style.opacity = "0.3";
-        document.getElementById("dot2").style.opacity = "0.3";
-        document.getElementById("dot3").style.opacity = "0.3";
-        document.getElementById("dot4").style.opacity = "1";
-        document.getElementById("dot5").style.opacity = "0.3";
-
-    }
-
-    // ======== SECTION 4 =============== //
-
-    function prevStep3() {
-        document.getElementById("fourth").style.display = "none";
-        document.getElementById("third").style.display = "inline";
-
-        document.getElementById("dot1").style.opacity = "0.3";
-        document.getElementById("dot2").style.opacity = "0.3";
-        document.getElementById("dot3").style.opacity = "1";
-        document.getElementById("dot4").style.opacity = "0.3";
-        document.getElementById("dot5").style.opacity = "0.3";
-    }
-
-    function nextStep4() {
-        document.getElementById("fourth").style.display = "none";
-        document.getElementById("fifth").style.display = "inline";
-
-        document.getElementById("dot1").style.opacity = "0.3";
-        document.getElementById("dot2").style.opacity = "0.3";
-        document.getElementById("dot3").style.opacity = "0.3";
-        document.getElementById("dot4").style.opacity = "0.3";
-        document.getElementById("dot5").style.opacity = "1";
-
-    }
-
-    // ======== SECTION 5 =============== //
-
-    function prevStep4() {
-        document.getElementById("fifth").style.display = "none";
-        document.getElementById("fourth").style.display = "inline";
-
-        document.getElementById("dot1").style.opacity = "0.3";
-        document.getElementById("dot2").style.opacity = "0.3";
-        document.getElementById("dot3").style.opacity = "0.3";
-        document.getElementById("dot4").style.opacity = "1";
-        document.getElementById("dot5").style.opacity = "0.3";
-    }
-
+$(function(){
+	$(".typed").typed({
+		strings: ["Developers.", "Designers.", "Hackers.", "OpenSourc.", "Awesome."],
+		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+		stringsElement: null,
+		// typing speed
+		typeSpeed: 30,
+		// time before typing starts
+		startDelay: 1200,
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// false = infinite
+		loopCount: 5,
+		// show cursor
+		showCursor: false,
+		// character for cursor
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+	});
 });
