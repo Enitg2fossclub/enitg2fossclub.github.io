@@ -1,6 +1,6 @@
 $(function(){
 	$(".typed").typed({
-		strings: ["Developers.", "Designers.", "Hackers.", "Opene Source.", "Awesome."],
+		strings: ["Developers.", "Designers.", "Hackers.", "Open Source.", "Awesome."],
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed
